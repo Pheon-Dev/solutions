@@ -8,8 +8,14 @@
 
 ### Solution
 
-- Delete:       :`/var/lib/pacman/sync`
-- Run           :`sudo pacman -Syyu`
+- Delete:
+```
+  /var/lib/pacman/sync
+```
+- Run:
+```
+  sudo pacman -Syyu
+```
 
 ---
 
@@ -32,16 +38,28 @@ xmonad.hs:13:1: error:
 
 ### Solution 
 
-- Run           :`mkdir -p ~/.config/xmonad && cd ~/.config/xmonad`
-- cd            :~/.config/xmonad/xmonad.hs
+- Run:
+```
+  mkdir -p ~/.config/xmonad && cd ~/.config/xmonad
+```
+
+- Edit:
+```
+  ~/.config/xmonad/xmonad.hs
+```
+
+- Add:
 ```
   import XMonad
   main :: IO ()
   main = xmonad def
 ```
-- Run           :`curl -sSL https://get.haskellstack.org/ | sh`
-- Run           :`git clone https://github.com/xmonad/xmonad`
-- Run           :`git clone https://github.com/xmonad/xmonad-contrib`
+- Run:
+```
+  curl -sSL https://get.haskellstack.org/ | sh
+  git clone https://github.com/xmonad/xmonad
+  git clone https://github.com/xmonad/xmonad-contrib
+```
 
 ---
 
@@ -70,8 +88,11 @@ error: failed to synchronize all databases (invalid or corrupted database (PGP s
 
 ### Solution 
 
-- Run           :`sudo rm -R /var/lib/pacman/sync`
-- Run           :`sudo pacman -Syyu`
+- Run:
+```
+  sudo rm -R /var/lib/pacman/sync
+  sudo pacman -Syyu
+```
 
 ---
 
@@ -91,10 +112,16 @@ $ ~ sudo pacman -Syyu
 
 ### Solution 
 
-- Run           :`find /var/cache/pacman/pkg/ -iname "*.part" -delete`
-- Run           :`pacman -Sy archlinux-keyring`
-- Run           :`sudo pacman -Syyu`
+- Run:
+```
+  find /var/cache/pacman/pkg/ -iname "*.part" -delete
+  pacman -Sy archlinux-keyring
+  sudo pacman -Syyu
+```
 
-- Maybe Run     :`pacman-key --refresh-keys`
+- Maybe Run:
+```
+  pacman-key --refresh-keys
+```
 
 ---
