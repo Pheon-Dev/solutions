@@ -35,12 +35,42 @@ xmonad.hs:13:1: error:
 - Run           :`mkdir -p ~/.config/xmonad && cd ~/.config/xmonad`
 - cd            :~/.config/xmonad/xmonad.hs
 ```
-    import XMonad
+  import XMonad
   main :: IO ()
   main = xmonad def
 ```
 - Run           :`curl -sSL https://get.haskellstack.org/ | sh`
 - Run           :`git clone https://github.com/xmonad/xmonad`
 - Run           :`git clone https://github.com/xmonad/xmonad-contrib`
+
+---
+
+## PROBLEM 3
+
+Error detected while loading xmonad configuration file: /home/username/.xmonad/xmonad.hs
+
+```
+$ ~ sudo pacman -Syyu
+error: GPGME error: No data
+error: GPGME error: No data
+error: GPGME error: No data
+error: GPGME error: No data
+:: Synchronizing package databases...
+ core                                        170.6 KiB   552 KiB/s 00:00 [########################################] 100%
+ extra                                      1901.8 KiB  7.52 MiB/s 00:00 [########################################] 100%
+ community                                     6.6 MiB  9.08 MiB/s 00:01 [########################################] 100%
+ multilib                                    177.4 KiB  3.21 MiB/s 00:00 [########################################] 100%
+error: GPGME error: No data
+error: GPGME error: No data
+error: GPGME error: No data
+error: GPGME error: No data
+error: failed to synchronize all databases (invalid or corrupted database (PGP signature))
+
+```
+
+### Solution 
+
+- Run           :`sudo rm -R /var/lib/pacman/sync`
+- Run           :`sudo pacman -Syyu`
 
 ---
