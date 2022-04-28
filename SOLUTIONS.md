@@ -47,7 +47,7 @@ xmonad.hs:13:1: error:
 
 ## PROBLEM 3
 
-Error detected while loading xmonad configuration file: /home/username/.xmonad/xmonad.hs
+GPGME Error on update
 
 ```
 $ ~ sudo pacman -Syyu
@@ -72,5 +72,29 @@ error: failed to synchronize all databases (invalid or corrupted database (PGP s
 
 - Run           :`sudo rm -R /var/lib/pacman/sync`
 - Run           :`sudo pacman -Syyu`
+
+---
+
+## PROBLEM 4
+
+error: failed to commit transaction (invalid or corrupted package)
+
+```
+$ ~ sudo pacman -Syyu
+:: Synchronizing package databases...
+........................................................................................................................
+........................................................................................................................
+ error: failed to commit transaction (invalid or corrupted package)
+ Errors occurred, no packages were upgraded.
+
+```
+
+### Solution 
+
+- Run           :`find /var/cache/pacman/pkg/ -iname "*.part" -delete`
+- Run           :`pacman -Sy archlinux-keyring`
+- Run           :`sudo pacman -Syyu`
+
+- Maybe Run     :`pacman-key --refresh-keys`
 
 ---
