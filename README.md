@@ -125,3 +125,23 @@ $ ~ sudo pacman -Syyu
 ```
 
 ---
+
+## PROBLEM 5
+
+Cargo returns error: no default toolchain configured
+
+```
+$ ~ cargo <flags> ••••
+error: no default toolchain configured
+$ ~
+
+```
+
+### Solution 
+
+- Run:
+```
+  rustup default stable
+```
+
+---
