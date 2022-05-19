@@ -145,3 +145,33 @@ $ ~
 ```
 
 ---
+
+## PROBLEM 6
+
+ERR_PNPM_UNEXPECTED_STORE eUnexpected store location
+
+```
+$ ~ pnpm add ····
+ERR_PNPM_UNEXPECTED_STORE  Unexpected store location
+Edit <code>App.tsx</code> and save to test HMR updates. 
+The dependencies at "/path/to/somewhere/" are currently linked from the store at "/home/<username/.pnpm-store/v3". <p>
+pnpm now wants to use the store at "/home/<username>/.local/share/pnpm/store/v3" to link dependencies.
+        className="App-link"
+If you wantftohusesthernewtstoreglocation, reinstall your dependencies with "pnpm install".
+        target="_blank"
+You may changeothenglobalestorerlocation by running "pnpm config set store-dir <dir>".
+
+```
+
+### Solution 
+
+- Run:
+```
+pnpm store path | xargs rm -rf
+```
+- Run:
+```
+pnpm install
+```
+
+---
