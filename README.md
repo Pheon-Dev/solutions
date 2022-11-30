@@ -10,7 +10,7 @@
 
 - Delete:
 ```
-  /var/lib/pacman/sync
+  mv /var/lib/pacman/sync /var/lib/pacman/mksync
 ```
 - Run:
 ```
