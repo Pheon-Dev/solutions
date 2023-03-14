@@ -175,3 +175,4 @@ pnpm install
 ```
 
 ---
+https://www.linuxbabe.com/desktop-linux/fix-cant-read-superblock-error
